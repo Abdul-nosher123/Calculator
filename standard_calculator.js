@@ -27,7 +27,7 @@ function onclick_write(num) {
     };
     waiting_for_second_value = false;
     display.value += num;
-    console.log(`${num}`);
+    // console.log(`${num}`);
 
 };
 function onclick_oprator(op) {
@@ -52,7 +52,7 @@ function onclick_oprator(op) {
 
     oprator = op;
     waiting_for_second_value = true;
-    console.log(`${first_value},${oprator},${display.value}`);
+    // console.log(`${first_value},${oprator},${display.value}`);
 
 };
 
@@ -69,14 +69,14 @@ function onclick_get_answer() {
 function onclick_all_clear() {
     display.value = "";
 
-    console.log(`all value is clear`);
+    // console.log(`all value is clear`);
 
 };
 
 
 function onclick_one_digit_clear() {
     display.value = display.value.slice(0, -1);
-    console.log(`one digit is clear`);
+    // console.log(`one digit is clear`);
 
 }
 
