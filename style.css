@@ -1,0 +1,167 @@
+/* Reset and base style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #4a90e2, #50c9ce);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+/* Calculator container */
+.container {
+    background: #1e1e2f;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Display screen */
+.screen input {
+    width: 100%;
+    height: 60px;
+    border: none;
+    outline: none;
+    background: #2c2c3e;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: right;
+}
+
+/* Buttons layout */
+.button_body {
+    margin-top: 15px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Button style */
+button {
+    flex: 1;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #3b3b52;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background: #4e4e6a;
+}
+
+button:active {
+    background: #6b6b8a;
+}
+
+/* Special button colors */
+button[onclick*="AC"] {
+    background: #e74c3c;
+}
+
+button[onclick*="AC"]:hover {
+    background: #c0392b;
+}
+
+button[onclick*="oprator"] {
+    background: #f39c12;
+}
+
+button[onclick*="oprator"]:hover {
+    background: #d68910;
+}
+
+button[onclick*="get_answer"] {
+    background: #27ae60;
+}
+
+button[onclick*="get_answer"]:hover {
+    background: #1e8449;
+}
+
+/* Calculator icon button */
+#switching_calulator {
+    background: #2980b9;
+}
+
+#switching_calulator:hover {
+    background: #1f6391;
+}
+
+/* Dropdown menu */
+.switching_calulator_wraper {
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+#calculator_drop_down {
+    display: none;
+    position: absolute;
+    top: -200%;
+    left: 0;
+    background: white;
+    border: 1px solid #444;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+#calculator_drop_down p {
+    margin: 0;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: 0.5px solid rgb(94, 88, 88);
+}
+
+#calculator_drop_down p:hover {
+    background: #3f3f55;
+    color: white;
+}
+
+
+/* Small mobile screen design (max 400px) */
+@media (max-width: 400px) {
+    .container {
+        max-width: 100%;
+        padding: 8px;
+    }
+
+    #display {
+        height: 45px;
+        font-size: 1.2rem;
+    }
+
+    .row {
+        gap: 6px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    /* Adjust dropdown for small screens */
+    #calculator_drop_down {
+        min-width: 150px;
+        left: 250%;
+        transform: translateX(-50%);
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standard Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner_face">
+            <!-- screen tag -->
+            <div class="screen">
+                <input type="text" id="display" readonly>
+            </div>
+            <!-- buttons -->
+            <div class="button_body">
+                <div class="row first_row">
+                    <button onclick="onclick_all_clear()">AC</button>
+                    <button onclick="onclick_one_digit_clear()"><i class="fa-solid fa-delete-left"></i></button>
+                    <button onclick="onclick_oprator('%')"><i class="fa-regular fa-percent"></i></button>
+                    <button onclick="onclick_oprator('/')"><i class="fa-solid fa-divide"></i></button>
+                </div>
+                <div class="row seconde_row">
+                    <button onclick="onclick_write('7')">7</button>
+                    <button onclick="onclick_write('8')">8</button>
+                    <button onclick="onclick_write('9')">9</button>
+                    <button onclick="onclick_oprator('*')"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+
+                <div class="row third_row">
+                    <button onclick="onclick_write('4')">4</button>
+                    <button onclick="onclick_write('5')">5</button>
+                    <button onclick="onclick_write('6')">6</button>
+                    <button onclick="onclick_oprator('-')"><i class="fa-solid fa-minus"></i></button>
+
+                </div>
+                <div class="row forth_row">
+                    <button onclick="onclick_write('1')">1</button>
+                    <button onclick="onclick_write('2')">2</button>
+                    <button onclick="onclick_write('3')">3</button>
+                    <button onclick="onclick_oprator('+')"><i class="fa-solid fa-plus"></i></button>
+
+                </div>
+                <div class="row fifth_row">
+                    <div class="switching_calulator_wraper">
+                        <button id="switching_calulator"><i class="fa-solid fa-calculator"></i></button>
+                        <!-- calculator switching list -->
+                        <div id="calculator_drop_down">
+                            <p>Standard Calculator</p>
+                            <p>Scientific Calculator</p>
+                            <p>Programmer Calculator</p>
+                        </div>
+                    </div>
+                    <!-- end calculator switching list-->
+                    <button onclick="onclick_write('0')">0</button>
+                    <button onclick="onclick_write('.')">.</button>
+                    <button onclick="onclick_get_answer('=')"><i class="fa-solid fa-equals"></i></button>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="./standard_calculator.js"></script>
+</body>
+
+</html>
